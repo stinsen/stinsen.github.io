@@ -122,7 +122,6 @@ a:after {
 
 #f {
 	background: #275015;
-	padding-top: 70px;
 	padding-bottom: 70px;
 	text-align: center
 }
@@ -142,6 +141,19 @@ a:after {
 	text-align: center;
 }
 
+
+/* CARUSEL */
+.carousel-indicators li {
+	border: 1px solid #C9F227;
+}
+
+.carousel-indicators .active {
+	background-color: #C9F227;
+}
+
+.carousel-inner {
+	padding-bottom: 60px;
+}
 
 /* MENU CONF*/
 
