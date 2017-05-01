@@ -121,9 +121,9 @@ a:after {
 /* Footer Wrap */
 
 #f {
-	background: #275015;
 	padding-bottom: 70px;
-	text-align: center
+	text-align: center;
+	color: #000;
 }
 
 #f h3 {
@@ -144,11 +144,11 @@ a:after {
 
 /* CARUSEL */
 .carousel-indicators li {
-	border: 1px solid #C9F227;
+	border: 1px solid #000;
 }
 
 .carousel-indicators .active {
-	background-color: #C9F227;
+	background-color: #000;
 }
 
 .carousel-inner {
