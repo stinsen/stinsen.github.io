@@ -7,7 +7,7 @@
             };
 
 			// Menu settings
-			$('#menuToggle, .menu-close').on('click', closeMenu);
+			$('#menuToggle').on('click', closeMenu);
 
             $('#f, #headerwrap').on('click', function () {
                 closeMenu(false);
