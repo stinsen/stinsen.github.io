@@ -12,7 +12,7 @@ body {
     font-family: Verdana, Geneva, sans-serif;
     font-weight: 300;
     font-size: 16px;
-    color: #C9F227;
+    color: #eac227;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -87,7 +87,7 @@ a:after {
 	min-height: 240px;
 	max-height: 312px;
 	width: 100%;
-	
+
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -129,7 +129,7 @@ a:after {
 #f h3 {
 	font-size: 28px;
 	font-weight: 700;
-	letter-spacing: 1px;	
+	letter-spacing: 1px;
 }
 
 #f i {
@@ -218,7 +218,7 @@ a:after {
 .menu a > i {
 	float: left;
 	display: inline-block;
-	vertical-align: middle; 
+	vertical-align: middle;
 	text-align: left;
 	width: 25px;
 	font-size: 14px;
