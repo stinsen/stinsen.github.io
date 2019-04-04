@@ -103,6 +103,7 @@ a:after {
 	text-shadow: 4px 2px 0 black;
 	font-size: 80px;
 	font-weight: 700;
+	padding-top: 20px;
 }
 
 #headerwrap h3 {
