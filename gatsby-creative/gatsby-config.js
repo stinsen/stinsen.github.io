@@ -1,9 +1,10 @@
 module.exports = {
   pathPrefix: `/gatsby-creative`,
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Beskärning och skötsel av fruktträd i Östersund, Jämtland`,
+    description: `Stinsens trädgård, hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland`,
+    author: `Christina Persson`,
+    googleSiteVerification: `hDG_6_BHAf4gu8J8mGqZz2atU9sWRY6e-dI1zoSnUVA`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,17 +26,20 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/stinsenstradgard-512x512.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Merriweather:400,300,300italic,400italic,700,700italic', 'Merriweather+Sans:400,700']
-        }
-      }
+          families: [
+            "Merriweather:400,300,300italic,400italic,700,700italic",
+            "Merriweather+Sans:400,700",
+          ],
+        },
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
