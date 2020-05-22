@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 const Portfolio = ({ images, handlePortfolioClick }) => {
   const portfolioItems = images.map((image, index) => (
-    <div className="col-lg-4 col-sm-6" key={index}>
+    <div className="col-lg-4 col-sm-6 gallery-image" key={index}>
       <a
         className="portfolio-box"
         href={`img/portfolio/fullsize/${image.node.childImageSharp.fluid.originalName}`}

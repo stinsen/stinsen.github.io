@@ -43,14 +43,14 @@ export default class IndexPage extends React.Component {
                 <h2 className="text-white mt-0">Beskärning och trädgård</h2>
                 <hr className="divider light my-4" />
 
-                <p className="text-white-50 mb-4">
+                <p className="text-white-75 mb-4">
                   <em>
                     Beskära träd är något av det roligaste jag vet! Det är
                     speciellt att få forma och ta hand om ett fruktträd - se det
                     växa och bära frukt!
                   </em>
                 </p>
-                <p className="text-white-50 mb-4">
+                <p className="text-white-75 mb-4">
                   Med rötterna i Skåne och med fjällen i hjärtat fick det till
                   slut bli i Jämtland som jag rotade mig. <br />
                   <br />
@@ -69,7 +69,7 @@ export default class IndexPage extends React.Component {
                   till september. Under denna period är du välkommen att anlita
                   mig!
                 </p>
-                <p className="text-white-50 mb-4">
+                <p className="text-white-75 mb-4">
                   <em>Stinsen - Christina Persson</em>
                 </p>
 
@@ -92,14 +92,14 @@ export default class IndexPage extends React.Component {
             <div className="row">
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-tree text-primary mb-4"></i>
+                  <i className="fas fa-4x fa-leaf text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Beskärning</h3>
                   <p className="text-muted mb-0">Beskärning av era frukträd</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
-                  <i className="fas fa-4x fa-leaf text-primary mb-4"></i>
+                  <i className="fas fa-4x fa-apple-alt text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Rådgivning</h3>
                   <p className="text-muted mb-0">
                     Allt ni behöver veta för att få era träd att bära frukt
