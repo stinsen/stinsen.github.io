@@ -153,24 +153,26 @@ export default class IndexPage extends React.Component {
             </div>
             <div className="row">
               <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i className="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>070-651 03 12</div>
+                <a href="tel:070-6510312">
+                  <i className="fas fa-phone fa-3x mb-3 text-muted" /><br />
+                  070-651 03 12
+                </a>
               </div>
               <div className="col-lg-4 mr-auto text-center mb-5">
-                <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
                 <a
                   className="d-block"
                   href="mailto:christina@stinsenstradgard.se"
                 >
+                  <i className="fas fa-envelope fa-3x mb-3 text-muted" /><br />
                   christina@stinsenstradgard.se
                 </a>
               </div>
               <div className="col-lg-4 mr-auto text-center">
-                <i className="fab fa-facebook fa-3x mb-3 text-muted"></i>
                 <a
                   className="d-block"
                   href="https://www.facebook.com/stinsenstradgard/"
                 >
+                  <i className="fab fa-facebook fa-3x mb-3 text-muted" /><br />
                   stinsenstradgard
                 </a>
               </div>
