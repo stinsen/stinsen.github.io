@@ -90,7 +90,7 @@ export default class Header extends React.Component {
                 <p className="text-white-75 font-weight-light mb-5">
                   Att beskära fruktträd behöver inte vara svårt. Anlita mig så
                   får ni hjälp att göra det på ett enkelt, roligt och effektivt
-                  sätt
+                  sätt.
                 </p>
                 <a
                   className="btn btn-primary btn-xl js-scroll-trigger"

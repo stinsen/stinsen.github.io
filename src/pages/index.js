@@ -102,7 +102,7 @@ export default class IndexPage extends React.Component {
                   <i className="fas fa-4x fa-apple-alt text-primary mb-4"></i>
                   <h3 className="h4 mb-2">Rådgivning</h3>
                   <p className="text-muted mb-0">
-                    Allt ni behöver veta för att få era träd att bära frukt
+                    Allt ni behöver veta för att få er trädgård att bära frukt
                   </p>
                 </div>
               </div>
@@ -142,9 +142,9 @@ export default class IndexPage extends React.Component {
                 </h2>
                 <hr className="divider my-4" />
                 <p className="text-muted mb-5">
-                  Jag är verksam inom Östersunds kommun.
+                  Jag är verksam inom Östersunds kommun och godkänd för F-skatt.
                   <br />
-                  Givetvis är jag godkänd för F-skatt.
+                  RUT-avdrag kan göras på arbetskostnaden vid beskärning.
                   <br />
                   <br />
                   <em>Christina Persson</em>
