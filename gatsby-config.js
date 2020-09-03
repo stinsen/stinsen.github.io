@@ -1,6 +1,7 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
+    siteUrl: `https://www.stinsenstradgard.se`,
     title: `Beskärning och skötsel av fruktträd i Östersund, Jämtland`,
     description: `Stinsens trädgård, hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland`,
     author: `Christina Persson`,
@@ -41,6 +42,8 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
