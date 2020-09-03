@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/gatsby-creative`,
+  pathPrefix: `/`,
   siteMetadata: {
     title: `Beskärning och skötsel av fruktträd i Östersund, Jämtland`,
     description: `Stinsens trädgård, hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland`,
