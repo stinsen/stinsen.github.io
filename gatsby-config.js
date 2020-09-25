@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.stinsenstradgard.se`,
     title: `Beskärning och skötsel av fruktträd i Östersund, Jämtland`,
-    description: `Stinsens trädgård, hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland`,
+    description: `Stinsens trädgård, Trädgårdsmästare Christina Persson erbjuder hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland`,
     author: `Christina Persson`,
     googleSiteVerification: `hDG_6_BHAf4gu8J8mGqZz2atU9sWRY6e-dI1zoSnUVA`
   },
