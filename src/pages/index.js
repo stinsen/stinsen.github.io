@@ -133,7 +133,7 @@ export default class IndexPage extends React.Component {
           handlePortfolioClick={this.handlePortfolioClick.bind(this)}
         />
 
-        <section className="page-section" id="contact">
+        <section className="page-section page-section--no-bottom-padding" id="contact">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
@@ -152,13 +152,13 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+              <div className="col-lg-3 col-md-6 text-center mb-5">
                 <a href="tel:070-6510312">
                   <i className="fas fa-phone fa-3x mb-3 text-muted" /><br />
                   070-651 03 12
                 </a>
               </div>
-              <div className="col-lg-4 mr-auto text-center mb-5">
+              <div className="col-lg-3 col-md-6 text-center mb-5">
                 <a
                   className="d-block"
                   href="mailto:christina@stinsenstradgard.se"
@@ -167,13 +167,22 @@ export default class IndexPage extends React.Component {
                   christina@stinsenstradgard.se
                 </a>
               </div>
-              <div className="col-lg-4 mr-auto text-center">
+              <div className="col-lg-3 col-md-6 text-center mb-5">
                 <a
                   className="d-block"
                   href="https://www.facebook.com/stinsenstradgard/"
                 >
                   <i className="fab fa-facebook fa-3x mb-3 text-muted" /><br />
-                  stinsenstradgard
+                  Stinsens trädgård facebook
+                </a>
+              </div>
+              <div className="col-lg-3 col-md-6 text-center mb-5">
+                <a
+                  className="d-block"
+                  href="https://www.instagram.com/stinsenstradgard/"
+                >
+                  <i className="fab fa-instagram fa-3x mb-3 text-muted" /><br />
+                  Stinsens trädgård instagram
                 </a>
               </div>
             </div>
