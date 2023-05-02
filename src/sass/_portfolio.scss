@@ -3,7 +3,7 @@
 	.container-fluid {
 		max-width: 1920px;
 		.gallery-image {
-			padding: $grid-gutter-width/2;
+			padding: calc($grid-gutter-width/2);
 		}
 		.portfolio-box {
 			position: relative;

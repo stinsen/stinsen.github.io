@@ -63,7 +63,7 @@ export default class Layout extends React.Component {
         <footer className="bg-light py-5">
           <div className="container">
             <div className="small text-center text-muted">
-              Copyright &copy; 2020 - Stinsens trädgård
+              Copyright &copy; 2023 - Stinsens trädgård
             </div>
           </div>
         </footer>

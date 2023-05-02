@@ -7,90 +7,52 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function Seo({ title, pathname, children }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            siteUrl
             title
             description
             author
+            googleSiteVerification
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const seoTitle = `${title} | ${site.siteMetadata.title}`;
+  const seoUrl = `${site.siteMetadata.siteUrl}${pathname}`;
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: `author`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `google-site-verification`,
-          content: site.siteMetadata.googleSiteVerification,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <>
+      <html lang="sv" />
+      <title>{seoTitle}</title>
+      <meta name="description" content={site.siteMetadata.description} />
+      <meta name="author" content={site.siteMetadata.author} />
+      <meta name="google-site-verification" content={site.siteMetadata.googleSiteVerification} />
+      <meta name="og:title" content={seoTitle} />
+      <meta name="og:url" content={seoUrl} />
+      <meta name="og:description" content={site.siteMetadata.description} />
+      <meta name="og:type" content="website" />
+      <meta name="twitter:url" content={seoUrl} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={site.siteMetadata.description} />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      {children}
+    </>
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
+Seo.propTypes = {
   title: PropTypes.string.isRequired,
+  pathname: PropTypes.string.isRequired
 }
 
-export default SEO
+export default Seo

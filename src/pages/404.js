@@ -1,14 +1,18 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <h1>Finns inte</h1>
+    <p>Sidan du söker finns inte...</p>
   </Layout>
 )
 
 export default NotFoundPage
+
+
+export const Head = ({location}) => (
+  <Seo title="404: Saknas" pathname={location.pathname}/>
+)

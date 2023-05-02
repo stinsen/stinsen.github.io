@@ -8,7 +8,6 @@ module.exports = {
     googleSiteVerification: `hDG_6_BHAf4gu8J8mGqZz2atU9sWRY6e-dI1zoSnUVA`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,6 +15,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -32,20 +32,23 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-omni-font-loader`,
       options: {
-        google: {
-          families: [
-            "Merriweather:400,300,300italic,400italic,700,700italic",
-            "Merriweather+Sans:400,700",
-          ],
-        },
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Merriweather`,
+            file: `https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap`,
+          },
+          {
+            name: `Merriweather+Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap`,
+          },
+        ],
       },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

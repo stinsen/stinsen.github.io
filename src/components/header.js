@@ -28,7 +28,7 @@ export default class Header extends React.Component {
             </a>
             <Navbar.Toggle aria-controls="navbarResponsive" />
             <Navbar.Collapse id="navbarResponsive">
-              <Nav className="navbar-nav ml-auto my-2 my-lg-0">
+              <Nav className="navbar-nav ms-auto my-2 my-lg-0">
                 <Scrollspy
                   className="navbar-nav"
                   items={["about", "services", "portfolio", "contact"]}
@@ -81,13 +81,13 @@ export default class Header extends React.Component {
           <div className="container h-100">
             <div className="row h-100 align-items-center justify-content-center text-center">
               <div className="col-lg-10 align-self-end">
-                <h1 className="text-uppercase text-white font-weight-bold">
+                <h1 className="text-uppercase text-white fw-bold">
                   Beskärning och råd kring skötsel av fruktträd
                 </h1>
-                <hr className="divider my-4" />
+                <hr className="divider my-4 mx-auto opacity-100" />
               </div>
               <div className="col-lg-8 align-self-baseline">
-                <p className="text-white-75 font-weight-light mb-5">
+                <p className="text-white-75 fw-light mb-5">
                   Att beskära fruktträd behöver inte vara svårt. Anlita mig så
                   får ni hjälp att göra det på ett enkelt, roligt och effektivt
                   sätt.

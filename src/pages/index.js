@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Scroller from "../components/scroller"
 import Portfolio from "../components/portfolio/portfolio"
 import PortfolioModal from "../components/portfolio/modal"
 import PortfolioCarousel from "../components/portfolio/carousel"
 
-export default class IndexPage extends React.Component {
+const IndexPage =  class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     Scroller.handleAnchorScroll = Scroller.handleAnchorScroll.bind(this)
@@ -35,13 +35,12 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Stinsens trädgård" />
         <section className="page-section bg-primary" id="about">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
                 <h2 className="text-white mt-0">Beskärning och trädgård</h2>
-                <hr className="divider light my-4" />
+                <hr className="divider light my-4 mx-auto opacity-100" />
 
                 <p className="text-white-75 mb-4">
                   <em>
@@ -88,7 +87,7 @@ export default class IndexPage extends React.Component {
         <section className="page-section" id="services">
           <div className="container">
             <h2 className="text-center mt-0">Mina tjänster</h2>
-            <hr className="divider my-4" />
+            <hr className="divider my-4 mx-auto opacity-100" />
             <div className="row">
               <div className="col-lg-3 col-md-6 text-center">
                 <div className="mt-5">
@@ -140,7 +139,7 @@ export default class IndexPage extends React.Component {
                 <h2 className="mt-0">
                   Hör av dig för att boka beskärningshjälp!
                 </h2>
-                <hr className="divider my-4" />
+                <hr className="divider my-4 mx-auto opacity-100" />
                 <p className="text-muted mb-5">
                   Jag är verksam inom Östersunds kommun och godkänd för F-skatt.
                   <br />
@@ -205,19 +204,21 @@ export default class IndexPage extends React.Component {
 export const imageData = graphql`
   query {
     images: allFile(
-      filter: { relativePath: { glob: "portfolio/fullsize/*.png" } }
-      sort: { fields: name }
+      filter: {relativePath: {glob: "portfolio/fullsize/*.png"}}
+      sort: {name: ASC}
     ) {
       edges {
         node {
           childImageSharp {
-            fluid {
-              originalName
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
     }
   }
 `
+export default IndexPage;
+
+export const Head = ({location}) => (
+  <Seo title="Stinsens trädgård" pathname={location.pathname}/>
+)
