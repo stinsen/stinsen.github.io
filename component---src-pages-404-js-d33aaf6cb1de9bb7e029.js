@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkstinsen_github_io=self.webpackChunkstinsen_github_io||[]).push([[883],{429:function(e,n,t){t.r(n),t.d(n,{Head:function(){return u}});var a=t(7294),i=t(6322),l=t(9357);n.default=()=>a.createElement(i.Z,null,a.createElement("h1",null,"Finns inte"),a.createElement("p",null,"Sidan du söker finns inte..."));const u=e=>{let{location:n}=e;return a.createElement(l.Z,{title:"404: Saknas",pathname:n.pathname})}}}]);
+//# sourceMappingURL=component---src-pages-404-js-d33aaf6cb1de9bb7e029.js.map
