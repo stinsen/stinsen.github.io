@@ -51,12 +51,14 @@ const IndexPage =  class IndexPage extends React.Component {
                 </p>
                 <p className="text-white-75 mb-4">
                   Med rötterna i Skåne och med fjällen i hjärtat fick det till
-                  slut bli i Jämtland som jag rotade mig. <br />
+                  slut bli i Jämtland som jag rotade mig.
+                  <br />
                   <br />
                   Jag är utbildad trädgårdsmästare med grönt kort i beskärning
                   av fruktträd, certifierad av Riksförbundet Svensk Trädgård.
                   Jag har flera års erfarenhet av beskärning bl.a. från arbete
-                  på Bergianska, Stockholms botaniska trädgård. <br />
+                  på Bergianska, Stockholms botaniska trädgård. 
+                  <br />
                   <br />
                   Jag utför professionell beskärning med trädets bästa i fokus.
                   Med rätt beskärning får du ett vackert och friskt träd med
@@ -141,7 +143,7 @@ const IndexPage =  class IndexPage extends React.Component {
                 </h2>
                 <hr className="divider my-4 mx-auto opacity-100" />
                 <p className="text-muted mb-5">
-                  Jag är verksam inom Östersunds kommun och godkänd för F-skatt.
+                  Jag är verksam inom och runt omkring Östersunds kommun och godkänd för F-skatt.
                   <br />
                   RUT-avdrag kan göras på arbetskostnaden vid beskärning.
                   <br />
@@ -221,5 +223,5 @@ export const imageData = graphql`
 export default IndexPage;
 
 export const Head = ({location}) => (
-  <Seo title="Stinsens trädgård" pathname={location.pathname}/>
+  <Seo pathname={location.pathname}/>
 )

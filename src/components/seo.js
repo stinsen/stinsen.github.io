@@ -27,7 +27,7 @@ function Seo({ title, pathname, children }) {
     `
   )
 
-  const seoTitle = `${title} | ${site.siteMetadata.title}`;
+  const seoTitle = title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title;
   const seoUrl = `${site.siteMetadata.siteUrl}${pathname}`;
 
   return (
@@ -53,7 +53,7 @@ function Seo({ title, pathname, children }) {
 }
 
 Seo.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   pathname: PropTypes.string.isRequired
 }
 
