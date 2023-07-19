@@ -7,20 +7,25 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import "./carousel.scss"
 
 const PortfolioCarousel = ({ images, current }) => {
-  const carouselItems = images.map((image, index) => (
+  const carouselItems = images.map((image, index) => {
+    const altText = image.node.name.replace("-", " ");
+    return (
     <Carousel.Item key={index}>
-      <figure>
-        <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} />
-        <figcaption>
-          <div className="bottom-bar">
-            <div className="counter">
-              {index + 1} av {images.length}
-            </div>
+    <figure>
+      <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} alt={altText} />
+      <figcaption>
+        <div className="bottom-bar">
+          <div className="counter">
+            {index + 1} av {images.length}
           </div>
-        </figcaption>
-      </figure>
-    </Carousel.Item>
-  ))
+        </div>
+      </figcaption>
+    </figure>
+  </Carousel.Item>
+  );
+  }
+
+  )
 
   return (
     <Carousel

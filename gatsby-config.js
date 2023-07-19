@@ -3,9 +3,10 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.stinsenstradgard.se`,
     title: `Beskärning och skötsel av fruktträd i Östersund, Jämtland`,
-    description: `Stinsens trädgård, Trädgårdsmästare Christina Persson erbjuder hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland`,
+    description: `Stinsens trädgård, Trädgårdsmästare Christina Persson erbjuder hjälp och råd vid beskärning och skötsel av fruktträd i Östersund, Jämtland. Christina beskär för att ge mest möjliga tillväxt och skörd av era äpplen, päron, plommon, körsbär och andra frukter och bär.`,
     author: `Christina Persson`,
-    googleSiteVerification: `hDG_6_BHAf4gu8J8mGqZz2atU9sWRY6e-dI1zoSnUVA`
+    googleSiteVerification: `hDG_6_BHAf4gu8J8mGqZz2atU9sWRY6e-dI1zoSnUVA`,
+    bingSiteVerification: `065B57625834A5987E85611695D3E416`
   },
   plugins: [
     {
@@ -21,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `stinsens-tradgard`,
+        short_name: `stinsens-tradgard`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

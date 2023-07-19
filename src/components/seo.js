@@ -20,6 +20,7 @@ function Seo({ title, pathname, children }) {
             description
             author
             googleSiteVerification
+            bingSiteVerification
           }
         }
       }
@@ -36,6 +37,7 @@ function Seo({ title, pathname, children }) {
       <meta name="description" content={site.siteMetadata.description} />
       <meta name="author" content={site.siteMetadata.author} />
       <meta name="google-site-verification" content={site.siteMetadata.googleSiteVerification} />
+      <meta name="msvalidate.01" content={site.siteMetadata.bingSiteVerification} />
       <meta name="og:title" content={seoTitle} />
       <meta name="og:url" content={seoUrl} />
       <meta name="og:description" content={site.siteMetadata.description} />

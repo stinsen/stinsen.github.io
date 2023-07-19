@@ -61,7 +61,7 @@ const IndexPage =  class IndexPage extends React.Component {
                   Jag utför professionell beskärning med trädets bästa i fokus.
                   Med rätt beskärning får du ett vackert och friskt träd med
                   möjlighet till god skörd. Jag ger även råd kring skötsel av
-                  fruktträd och andra växter i trädgården.
+                  fruktträd, äppelträd, bärbuskar och andra växter i trädgården.
                   <br />
                   <br />
                   Bästa tid för beskärning är mars till början av maj samt juli
@@ -212,6 +212,7 @@ export const imageData = graphql`
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED)
           }
+          name
         }
       }
     }
