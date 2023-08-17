@@ -4,7 +4,7 @@ import { GatsbyImage, getSrc } from "gatsby-plugin-image"
 
 const Portfolio = ({ images, handlePortfolioClick }) => {
   const portfolioItems = images.map((image, index) => {
-    const altText = image.node.name.replace("-", " ");
+    const altText = image.node.name.replaceAll("-", " ");
     return (
     <div className="col-lg-4 col-sm-6 gallery-image" key={index}>
       <a
