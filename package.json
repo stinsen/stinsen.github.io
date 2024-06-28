@@ -2,42 +2,18 @@
   "name": "stinsen.github.io",
   "private": true,
   "description": "www.stinsenstradgard.se",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "nicklasisraelsson",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "bootstrap": "^5.2.3",
-    "gatsby": "^5.9.0",
-    "gatsby-omni-font-loader": "^2.0.2",
-    "gatsby-plugin-image": "^3.9.0",
-    "gatsby-plugin-manifest": "^5.9.0",
-    "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.9.0",
-    "gatsby-plugin-sharp": "^5.9.0",
-    "gatsby-plugin-sitemap": "^6.9.0",
-    "gatsby-source-filesystem": "^5.9.0",
-    "gatsby-transformer-sharp": "^5.9.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-scrollspy": "^3.4.0",
-    "sass": "^1.62.1"
-  },
-  "devDependencies": {
-    "prettier": "^2.8.8"
-  },
   "keywords": [
-    "gatsby"
+    "stinsen",
+    "trädgård",
+    "beskärning",
+    "fruktträd",
+    "HTML",
+    "CSS"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "start": "npx http-server"
   }
 }
