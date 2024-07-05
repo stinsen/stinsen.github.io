@@ -51,6 +51,26 @@ svg {
   margin: auto;
 }
 
+.grid {
+  --grid-layout-gap: 1.5rem;
+  --grid-item-size: 360px;
+
+  display: grid;
+  justify-content: center;
+  gap: var(--grid-layout-gap);
+  grid-template-columns: repeat(auto-fill, var(--grid-item-size));
+  max-width: calc((2 * var(--grid-item-size) + var(--grid-layout-gap)));
+  margin: auto;
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    --grid-item-size: 250px;
+
+    max-width: calc((4 * var(--grid-item-size) + 3 * var(--grid-layout-gap)));
+  }
+}
+
 .gallery {
   --grid-layout-gap: 1.5rem;
   --grid-column-count: 3;
