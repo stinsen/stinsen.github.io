@@ -115,3 +115,11 @@ footer {
   height: auto;
   content-visibility: auto;
 }
+
+#services svg {
+  fill: var(--primary);
+}
+
+#contact svg {
+  fill: var(--gray);
+}
