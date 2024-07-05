@@ -10,6 +10,10 @@
   --font-weight: 400;
   --line-height: 1.5;
   scroll-behavior: smooth;
+  --primary: #f4623a;
+  --white: #fff;
+  --black: #000;
+  --gray: #6c757d;
 }
 
 body {
@@ -17,6 +21,7 @@ body {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
+  text-align: center;
 }
 
 h1,
@@ -41,9 +46,21 @@ section {
   padding: 8rem 0;
 }
 
+hr {
+  max-width: 3.25rem;
+  border: 0;
+  border-top: 1px solid;
+  margin: 1.5rem auto;
+}
+
 svg {
   width: 4em;
   height: 4em;
+}
+
+footer {
+  font-size: 0.875em;
+  padding: 3rem 0;
 }
 
 #page-top {
