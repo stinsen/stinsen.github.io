@@ -66,11 +66,25 @@
       href="https://fonts.gstatic.com"
       crossorigin="true" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap" />
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;display=swap" />
+    </noscript>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&amp;display=swap" />
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&amp;display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&amp;display=swap" />
+    </noscript>
     <link rel="stylesheet" href="/styles/site.css" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <title>Beskärning och skötsel av fruktträd i Östersund</title>
@@ -228,24 +242,78 @@
         </section>
         <section id="portfolio">
           <div class="gallery">
-            <img
-              src="/src/images/portfolio/fullsize/beskärning-med-sekatör.png"
-              alt="Beskärning av träd med sekatör" />
-            <img
-              src="/src/images/portfolio/fullsize/christina-persson.png"
-              alt="Christina Persson, också känd som Stinsen" />
-            <img
-              src="/src/images/portfolio/fullsize/fruktträdsplantering.png"
-              alt="En prydlig fruktträdsplantering" />
-            <img
-              src="/src/images/portfolio/fullsize/röda-äpplen.png"
-              alt="Stora röda äpplen" />
-            <img
-              src="/src/images/portfolio/fullsize/äppelblommor.png"
-              alt="Vita äppelblommor som senare blir till äpplen" />
-            <img
-              src="/src/images/portfolio/fullsize/äppelodling.png"
-              alt="Äppelodling" />
+            <picture>
+              <source
+                srcset="
+                  /src/images/portfolio/fullsize/beskärning-med-sekatör.avif
+                " />
+              <img
+                src="/src/images/portfolio/fullsize/beskärning-med-sekatör.png"
+                alt="Beskärning av träd med sekatör"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  /src/images/portfolio/fullsize/christina-persson.avif
+                " />
+              <img
+                src="/src/images/portfolio/fullsize/christina-persson.png"
+                alt="Christina Persson, också känd som Stinsen"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  /src/images/portfolio/fullsize/fruktträdsplantering.avif
+                " />
+              <img
+                src="/src/images/portfolio/fullsize/fruktträdsplantering.png"
+                alt="En prydlig fruktträdsplantering"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="/src/images/portfolio/fullsize/röda-äpplen.avif" />
+              <img
+                src="/src/images/portfolio/fullsize/röda-äpplen.png"
+                alt="Stora röda äpplen"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="/src/images/portfolio/fullsize/äppelblommor.avif" />
+              <img
+                src="/src/images/portfolio/fullsize/äppelblommor.png"
+                alt="Vita äppelblommor som senare blir till äpplen"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="/src/images/portfolio/fullsize/äppelodling.avif" />
+              <img
+                src="/src/images/portfolio/fullsize/äppelodling.png"
+                alt="Äppelodling"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
           </div>
         </section>
         <section id="contact">
