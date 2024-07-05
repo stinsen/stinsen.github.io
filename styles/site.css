@@ -22,6 +22,7 @@ body {
   font-weight: var(--font-weight);
   line-height: var(--line-height);
   text-align: center;
+  margin: 0;
 }
 
 h1,
@@ -40,6 +41,46 @@ h1 {
   font-weight: 700;
   font-size: 2.25rem;
   text-transform: uppercase;
+}
+
+nav {
+  font-family: var(--font-familiy-sans-serif);
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--white);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+nav li {
+  list-style: none;
+  padding: 0.75rem 0;
+}
+
+nav li a {
+  color: var(--gray);
+}
+
+nav li a:hover {
+  color: var(--primary);
 }
 
 section {
@@ -63,7 +104,7 @@ footer {
   padding: 3rem 0;
 }
 
-#page-top {
+#portfolio {
   max-width: 1920px;
   margin: auto;
 }
@@ -78,14 +119,6 @@ footer {
   grid-template-columns: repeat(auto-fill, var(--grid-item-size));
   max-width: calc((2 * var(--grid-item-size) + var(--grid-layout-gap)));
   margin: auto;
-}
-
-@media (min-width: 1200px) {
-  .grid {
-    --grid-item-size: 250px;
-
-    max-width: calc((4 * var(--grid-item-size) + 3 * var(--grid-layout-gap)));
-  }
 }
 
 .gallery {
@@ -122,4 +155,55 @@ footer {
 
 #contact svg {
   fill: var(--gray);
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  header {
+    padding-top: 85px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .grid {
+    --grid-item-size: 250px;
+
+    max-width: calc((4 * var(--grid-item-size) + 3 * var(--grid-layout-gap)));
+  }
 }
