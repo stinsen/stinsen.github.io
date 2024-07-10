@@ -15,6 +15,7 @@
   --black: #000;
   --gray: #6c757d;
   --white-text: hsla(0, 0%, 100%, 0.75);
+  --site-x-gutter: 0.75rem;
 }
 
 body {
@@ -43,6 +44,14 @@ h1 {
   font-size: 2.25rem;
   text-transform: uppercase;
   color: var(--white);
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+h3 {
+  font-size: calc(1.275rem + 0.3vw);
 }
 
 a {
@@ -79,10 +88,18 @@ nav button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.375rem;
   cursor: pointer;
+  padding: 0.1rem 0.5rem;
+}
+
+nav svg {
+  width: 2.5em;
+  height: 2.5em;
+  fill: var(--gray);
 }
 
 nav a {
   color: var(--black);
+  white-space: nowrap;
 }
 
 nav .nav-items {
@@ -114,11 +131,6 @@ nav li a:hover {
   color: var(--primary);
 }
 
-nav svg {
-  width: 1.5em;
-  height: 1.5em;
-}
-
 section {
   padding: 8rem 0;
 }
@@ -146,12 +158,13 @@ footer {
 }
 
 .container {
+  padding: 0 var(--site-x-gutter);
   margin: auto;
-  width: 100%;
 }
 
 header {
   padding-top: 10rem;
+  padding-bottom: calc(10rem - 74px);
   background: linear-gradient(
       180deg,
       rgba(92, 77, 66, 0.8) 0,
@@ -191,6 +204,10 @@ header .btn:hover,
   color: var(--white-text);
 }
 
+#about h2 {
+  color: var(--white);
+}
+
 #about hr {
   border-color: var(--white);
 }
@@ -206,6 +223,7 @@ header .btn:hover,
 #portfolio {
   max-width: 1920px;
   margin: auto;
+  padding: 0;
 }
 
 a.btn {
@@ -223,14 +241,19 @@ a.btn {
 
 .grid {
   --grid-layout-gap: 1.5rem;
-  --grid-item-size: 360px;
 
   display: grid;
   justify-content: center;
   gap: var(--grid-layout-gap);
-  grid-template-columns: repeat(auto-fill, var(--grid-item-size));
-  max-width: calc((2 * var(--grid-item-size) + var(--grid-layout-gap)));
   margin: auto;
+}
+
+#services .grid {
+  margin-bottom: 4rem;
+}
+
+#services svg {
+  fill: var(--primary);
 }
 
 .gallery {
@@ -253,6 +276,7 @@ a.btn {
     minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
   );
   gap: var(--grid-layout-gap);
+  padding: 0 var(--site-x-gutter);
 }
 
 .gallery img {
@@ -261,16 +285,38 @@ a.btn {
   content-visibility: auto;
 }
 
-#services svg {
-  fill: var(--primary);
-}
-
 #contact svg {
   fill: var(--gray);
 }
 
+#contact .text {
+  color: var(--gray);
+  margin-bottom: 0;
+}
+
 #contact a {
   text-decoration: underline;
+  color: var(--primary);
+}
+
+#contact a:hover {
+  color: #c34e2e;
+}
+
+section#contact {
+  padding-bottom: 3rem;
+}
+
+.text {
+  margin-bottom: 3rem;
+}
+
+.card {
+  padding-top: 3rem;
+}
+
+.card span {
+  color: var(--gray);
 }
 
 @media (min-width: 576px) {
@@ -296,8 +342,8 @@ a.btn {
     grid-column: unset;
   }
 
-  header {
-    padding-top: 85px;
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -307,12 +353,13 @@ a.btn {
   }
 
   header {
-    height: 100vh;
+    height: calc(100vh - 80px);
     min-height: 40rem;
+    padding-top: 80px;
     padding-bottom: 0;
   }
 
-  header h1 {
+  h1 {
     font-size: 3rem;
     padding: 0 5rem;
   }
@@ -325,8 +372,13 @@ a.btn {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }
+
   .text p {
     grid-column: 2/6;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -335,13 +387,11 @@ a.btn {
     max-width: 1140px;
   }
 
-  header h1 {
+  h1 {
     font-size: 3.5rem;
   }
 
-  .grid {
-    --grid-item-size: 250px;
-
-    max-width: calc((4 * var(--grid-item-size) + 3 * var(--grid-layout-gap)));
+  h2 {
+    font-size: 2rem;
   }
 }
