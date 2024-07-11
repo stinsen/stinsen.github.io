@@ -279,10 +279,49 @@ a.btn {
   padding: 0 var(--site-x-gutter);
 }
 
-.gallery img {
+.gallery picture[clickable] {
+  cursor: pointer;
+}
+
+.gallery img,
+image-dialog img {
   max-width: 100%;
   height: auto;
   content-visibility: auto;
+  user-select: none;
+}
+
+image-dialog dialog[open] {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  border: none;
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 4rem minmax(300px, 1fr) 4rem;
+  align-items: center;
+}
+
+image-dialog dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+image-dialog dialog form {
+  justify-self: end;
+  grid-column: 3;
+}
+
+image-dialog dialog button {
+  border: none;
+  background: transparent;
+  outline: transparent;
+  cursor: pointer;
+}
+
+image-dialog dialog button svg {
+  fill: var(--white);
+  width: 2em;
+  height: 2em;
 }
 
 #contact svg {
@@ -345,6 +384,11 @@ section#contact {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  image-dialog dialog button svg {
+    width: 4em;
+    height: 4em;
+  }
 }
 
 @media (min-width: 992px) {
@@ -362,6 +406,11 @@ section#contact {
   h1 {
     font-size: 3rem;
     padding: 0 5rem;
+  }
+
+  p,
+  span {
+    text-wrap: balance;
   }
 
   header p {

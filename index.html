@@ -94,7 +94,7 @@
       <show-hide>
         <div class="container">
           <a href="#">Stinsens Trädgård</a>
-          <button trigger hidden aria-label="Toggle navigation">
+          <button trigger hidden aria-label="Visa navigation">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -241,75 +241,82 @@
       <section id="portfolio">
         <h2>Galleri</h2>
         <hr />
-        <div class="gallery">
-          <picture>
-            <source
-              srcset="
-                /src/images/portfolio/fullsize/beskärning-med-sekatör.avif
-              " />
-            <img
-              src="/src/images/portfolio/fullsize/beskärning-med-sekatör.png"
-              alt="Beskärning av träd med sekatör"
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-          <picture>
-            <source
-              srcset="/src/images/portfolio/fullsize/christina-persson.avif" />
-            <img
-              src="/src/images/portfolio/fullsize/christina-persson.png"
-              alt="Christina Persson, också känd som Stinsen"
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-          <picture>
-            <source
-              srcset="
-                /src/images/portfolio/fullsize/fruktträdsplantering.avif
-              " />
-            <img
-              src="/src/images/portfolio/fullsize/fruktträdsplantering.png"
-              alt="En prydlig fruktträdsplantering"
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-          <picture>
-            <source srcset="/src/images/portfolio/fullsize/röda-äpplen.avif" />
-            <img
-              src="/src/images/portfolio/fullsize/röda-äpplen.png"
-              alt="Stora röda äpplen"
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-          <picture>
-            <source srcset="/src/images/portfolio/fullsize/äppelblommor.avif" />
-            <img
-              src="/src/images/portfolio/fullsize/äppelblommor.png"
-              alt="Vita äppelblommor som senare blir till äpplen"
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-          <picture>
-            <source srcset="/src/images/portfolio/fullsize/äppelodling.avif" />
-            <img
-              src="/src/images/portfolio/fullsize/äppelodling.png"
-              alt="Äppelodling"
-              width="800"
-              height="600"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-        </div>
+        <image-dialog>
+          <div class="gallery">
+            <picture>
+              <source
+                srcset="
+                  /src/images/portfolio/fullsize/beskärning-med-sekatör.avif
+                " />
+              <img
+                src="/src/images/portfolio/fullsize/beskärning-med-sekatör.png"
+                alt="Beskärning av träd med sekatör"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  /src/images/portfolio/fullsize/christina-persson.avif
+                " />
+              <img
+                src="/src/images/portfolio/fullsize/christina-persson.png"
+                alt="Christina Persson, också känd som Stinsen"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="
+                  /src/images/portfolio/fullsize/fruktträdsplantering.avif
+                " />
+              <img
+                src="/src/images/portfolio/fullsize/fruktträdsplantering.png"
+                alt="En prydlig fruktträdsplantering"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="/src/images/portfolio/fullsize/röda-äpplen.avif" />
+              <img
+                src="/src/images/portfolio/fullsize/röda-äpplen.png"
+                alt="Stora röda äpplen"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="/src/images/portfolio/fullsize/äppelblommor.avif" />
+              <img
+                src="/src/images/portfolio/fullsize/äppelblommor.png"
+                alt="Vita äppelblommor som senare blir till äpplen"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+            <picture>
+              <source
+                srcset="/src/images/portfolio/fullsize/äppelodling.avif" />
+              <img
+                src="/src/images/portfolio/fullsize/äppelodling.png"
+                alt="Äppelodling"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async" />
+            </picture>
+          </div>
+        </image-dialog>
       </section>
       <section id="contact">
         <div class="container">
@@ -391,6 +398,6 @@
     <footer>
       <span>Copyright © 2024 - Stinsens trädgård</span>
     </footer>
-    <script defer src="src/site.js"></script>
+    <script type="module" src="src/site.js"></script>
   </body>
 </html>
