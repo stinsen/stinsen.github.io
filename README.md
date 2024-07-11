@@ -1,6 +1,6 @@
 # Stinsens trädgård
 
-Adopting [gatsby-creative](https://github.com/JohnJKerr/gatsby-creative) into a pure HTML + CSS site for [Stinsens Trädgård](https://www.stinsenstradgard.se)
+Adopting [gatsby-creative](https://github.com/JohnJKerr/gatsby-creative) into a pure HTML + CSS site for [Stinsens Trädgård](https://stinsenstradgard.se)
 
 ## Run locally
 

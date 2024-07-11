@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.stinsenstradgard.se/sitemap-index.xml
-Host: https://www.stinsenstradgard.se
+Sitemap: https://stinsenstradgard.se/sitemap-index.xml
+Host: https://stinsenstradgard.se
