@@ -46,7 +46,9 @@ export default class extends HTMLElement {
     let btn = document.createElement("button");
     btn.innerHTML = icon;
     btn.setAttribute("aria-label", label);
-    btn.setAttribute(attribute, "");
+    if (attribute) {
+      btn.setAttribute(attribute, "");
+    }
     return btn;
   }
 
