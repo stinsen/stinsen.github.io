@@ -11,7 +11,11 @@ export default class extends HTMLElement {
     form.appendChild(this.closeBtn);
     this.dialog.appendChild(form);
 
-    this.prevBtn = this.createIconButton(this.getPrevIcon(), "Föregående bild");
+    this.prevBtn = this.createIconButton(
+      this.getPrevIcon(),
+      "Föregående bild",
+      "prev"
+    );
     this.prevBtn.setAttribute("index-modifier", "-1");
     this.prevBtn.addEventListener("click", this);
     this.dialog.appendChild(this.prevBtn);
@@ -19,7 +23,11 @@ export default class extends HTMLElement {
       image.setAttribute("hidden", "");
       this.dialog.appendChild(image);
     });
-    this.nextBtn = this.createIconButton(this.getNextIcon(), "Nästa bild");
+    this.nextBtn = this.createIconButton(
+      this.getNextIcon(),
+      "Nästa bild",
+      "next"
+    );
     this.nextBtn.setAttribute("index-modifier", "1");
     this.nextBtn.addEventListener("click", this);
     this.dialog.appendChild(this.nextBtn);
@@ -34,10 +42,11 @@ export default class extends HTMLElement {
     this.dialog.addEventListener("close", this);
   }
 
-  createIconButton(icon, label) {
+  createIconButton(icon, label, attribute) {
     let btn = document.createElement("button");
     btn.innerHTML = icon;
     btn.setAttribute("aria-label", label);
+    btn.setAttribute(attribute, "");
     return btn;
   }
 

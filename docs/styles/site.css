@@ -297,8 +297,12 @@ image-dialog dialog[open] {
   height: 100vh;
   background: transparent;
   border: none;
-  grid-template-rows: 4rem 1fr;
-  grid-template-columns: 4rem minmax(300px, 1fr) 4rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "close close close"
+    "picture picture picture"
+    "prev blank next";
   align-items: center;
 }
 
@@ -306,9 +310,10 @@ image-dialog dialog::backdrop {
   background: rgba(0, 0, 0, 0.8);
 }
 
-image-dialog dialog form {
+image-dialog dialog[open] form {
   justify-self: end;
-  grid-column: 3;
+  align-self: end;
+  grid-area: close;
 }
 
 image-dialog dialog button {
@@ -316,12 +321,25 @@ image-dialog dialog button {
   background: transparent;
   outline: transparent;
   cursor: pointer;
+  align-self: start;
 }
 
 image-dialog dialog button svg {
   fill: var(--white);
   width: 2em;
   height: 2em;
+}
+
+image-dialog dialog[open] picture {
+  grid-area: picture;
+}
+
+image-dialog button[prev] {
+  grid-area: prev;
+}
+
+image-dialog button[next] {
+  grid-area: next;
 }
 
 #contact svg {
@@ -383,6 +401,18 @@ section#contact {
 
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  image-dialog dialog[open] {
+    grid-template-rows: 4rem 1fr;
+    grid-template-columns: 4rem minmax(300px, 1fr) 4rem;
+    grid-template-areas:
+      "close close close"
+      "prev picture next";
+  }
+
+  image-dialog dialog button {
+    align-self: unset;
   }
 
   image-dialog dialog button svg {
