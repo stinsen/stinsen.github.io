@@ -40,6 +40,7 @@ export default class extends HTMLElement {
     });
 
     this.dialog.addEventListener("close", this);
+    this.dialog.addEventListener("keydown", this);
   }
 
   createIconButton(icon, label, attribute) {
@@ -81,6 +82,11 @@ export default class extends HTMLElement {
 
   onclose() {
     this.dialogImages.forEach((image) => image.setAttribute("hidden", ""));
+  }
+
+  onkeydown(event) {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    this.goToNextImage(event.key === "ArrowLeft" ? -1 : 1);
   }
 
   getCloseIcon() {
